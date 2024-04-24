@@ -28,9 +28,4 @@ public class S3Controller {
         return this.s3Service.uploadImage(request);
     }
 
-    @GetMapping("/images")
-    public ResponseEntity<GetImageListDtoResponse> getImageList(GetImageListDtoRequest request) {
-        return this.s3Service.getImageList(request);
-    }
-
 }

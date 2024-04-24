@@ -3,8 +3,6 @@ package com.demo.localstack_demo.service;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.ObjectMetadata;
-import com.demo.localstack_demo.dto.UploadImageDto.GetImageListDtoRequest;
-import com.demo.localstack_demo.dto.UploadImageDto.GetImageListDtoResponse;
 import com.demo.localstack_demo.dto.UploadImageDto.UploadImageDtoRequest;
 import com.demo.localstack_demo.dto.UploadImageDto.UploadImageDtoResponse;
 import com.demo.localstack_demo.properties.AwsProperties;
@@ -72,9 +70,5 @@ public class S3Service {
         return null;
     }
 
-
-    public ResponseEntity<GetImageListDtoResponse> getImageList(GetImageListDtoRequest request) {
-        return null;
-    }
 
 }
