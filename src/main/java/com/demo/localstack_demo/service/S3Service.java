@@ -38,7 +38,6 @@ public class S3Service {
         List<String> allowedExtensions = Arrays.asList("jpg", "png", "gif", "jpeg");
 
         if (!allowedExtensions.contains(fileExtension)) {
-//            throw new Exception400("file", ErrorMessage.NOT_IMAGE_EXTENSION);
             throw new Exception("NOT_IMAGE_EXTENSION");
         }
         return fileExtension;
@@ -66,8 +65,8 @@ public class S3Service {
                 .build());
         } catch (Exception e) {
             e.printStackTrace();
+            return ResponseEntity.internalServerError().build();
         }
-        return null;
     }
 
 
